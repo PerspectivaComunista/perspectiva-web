@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Helvetica;
+  src: url("./Helvetica.ttf");
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+.animate-spin-fast {
+  animation: spin 2s ease-out;
+}
+
+.animation-nav {
+  animation: nav 0.5s ease-out;
+}
+
+.closing-animation {
+  animation: closeNav 0.8s ease-out;
+}
+
+.bg-fundal {
+  background-image: url("./images/fundal.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-red {
+  background-color: #d6001d;
+}
+
+.hover-bg-red:hover {
+  background-color: #d6001d;
+}
+
+.text-red {
+  color: #d6001d;
+}
+
+.hover-text-red:hover {
+  color: #d6001d;
+}
+
+.text-demos {
+  color: #90004c;
+}
+
+.bg-demos {
+  background-color: #90004c;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #d6001d;
+}
+
+::selection {
+  color: white;
+  background: #d6001d;
+}
+
+@keyframes nav {
+  0% {
+    transform: translate(-100%, -160%) scale(0.01);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes closeNav {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(-100%, -160%) scale(0.01);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(5turn);
+  }
+}
