@@ -29,14 +29,14 @@ export default function Header() {
   }, [isMenuOpen, setIsMenuOpen]);
 
   return (
-    <header className="w-full bg-fundal">
+    <header className="w-full bg-black">
       <div
-        className="bg-fundal flex mx-auto max-w-screen-xl justify-between items-center px-3 sm:pb-6 sm:pt-2 py-2 sm:gap-8"
-        style={{ backgroundPosition: "515px" }}
+        className="flex bg-fundal mx-auto lg:max-w-screen-xl justify-between items-center px-3 py-6 lg:gap-8 lg:relative fixed w-full"
+        style={{ backgroundPosition: "0 center" }}
       >
         <button
           type="button"
-          className="relative inline-flex sm:hidden items-center justify-center rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          className="relative inline-flex lg:hidden items-center justify-center rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
           aria-controls="mobile-menu"
           aria-expanded="false"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -61,13 +61,15 @@ export default function Header() {
         </button>
 
         <div className="flex flex-col justify-between">
-          <h1 className="lg:text-2xl text-xl text-white py-6 sm:block hidden">
+          <h1 className="lg:text-2xl text-xl text-white pb-6 lg:block hidden">
             O inițiativă pentru consolidarea <br /> unei platforme
+            <br />
             civico-politice pentru <br /> însănătoșirea vieții sociale, politice
+            <br />
             și economice <br /> în perspectiva anului electoral 2024
           </h1>
 
-          <nav className="sm:flex hidden justify-between items-center gap-6 ">
+          <nav className="lg:flex hidden justify-between items-center gap-6 ">
             {navigation.map((nav) => (
               <Link
                 href={nav.id}
@@ -80,7 +82,9 @@ export default function Header() {
                 }
                 target={nav.target}
               >
-                <p className="text-white text-lg m-0">{nav.name}</p>
+                <p className="text-white text-2xl m-0 link link-underline link-underline-black">
+                  {nav.name}
+                </p>
               </Link>
             ))}
           </nav>
@@ -92,13 +96,13 @@ export default function Header() {
             alt="Logo"
             width={250}
             height={250}
-            className="object-contain md:w-60 sm:w-36 w-12 h-auto"
+            className="object-contain lg:w-60 lg:w-36 w-12 h-auto"
             priority
           />
         </Link>
       </div>
 
-      <Link href="/" className="sm:hidden block">
+      <Link href="/" className="lg:hidden block">
         <h1 className="text-base text-white text-left px-4 pb-4">
           "O inițiativă pentru consolidarea <br /> unei platforme
           civico-politice pentru <br /> însănătoșirea vieții sociale, politice
@@ -108,7 +112,7 @@ export default function Header() {
 
       {isMenuOpen && (
         <nav
-          className="sm:hidden flex flex-col fixed top-0 w-3/4 h-fit px-5 py-10 justify-start gap-3 bg-red animation-nav transition-all z-20 rounded-ee-[150px]"
+          className="lg:hidden flex flex-col fixed top-0 w-3/4 h-fit px-5 py-10 justify-start gap-3 bg-red animation-nav transition-all z-20 rounded-ee-[150px]"
           ref={nav}
         >
           <button
