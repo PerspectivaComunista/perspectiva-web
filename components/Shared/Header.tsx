@@ -31,7 +31,7 @@ export default function Header() {
   return (
     <header className="w-full bg-black">
       <div
-        className="flex bg-fundal mx-auto lg:max-w-screen-xl justify-between items-center px-3 py-6 lg:gap-8 lg:relative fixed w-full"
+        className="flex bg-black bg-fundal mx-auto lg:max-w-screen-xl justify-between items-center px-3 py-6 lg:gap-8 w-full"
         style={{ backgroundPosition: "0 center" }}
       >
         <button
@@ -62,11 +62,12 @@ export default function Header() {
 
         <div className="flex flex-col justify-between">
           <h1 className="lg:text-2xl text-xl text-white pb-6 lg:block hidden">
-            O inițiativă pentru consolidarea <br /> unei platforme
+            Suntem câțiva muncitori care au reușit <br /> să-și trezească
+            conștiința de clasă, pas esențial <br /> în lupta împotriva
+            opresiunii capitaliste.
             <br />
-            civico-politice pentru <br /> însănătoșirea vieții sociale, politice
-            <br />
-            și economice <br /> în perspectiva anului electoral 2024
+            Scopul nostru este să clarificăm conceptele de bază, <br /> și să
+            sugerăm materiale de lectură ✮
           </h1>
 
           <nav className="lg:flex hidden justify-between items-center gap-6 ">
@@ -96,23 +97,24 @@ export default function Header() {
             alt="Logo"
             width={250}
             height={250}
-            className="object-contain lg:w-60 lg:w-36 w-12 h-auto"
+            className="object-contain lg:w-60 w-12 h-auto"
             priority
           />
         </Link>
       </div>
 
-      <Link href="/" className="lg:hidden block">
+      <Link href="/" className="lg:hidden block relative">
         <h1 className="text-base text-white text-left px-4 pb-4">
-          "O inițiativă pentru consolidarea <br /> unei platforme
-          civico-politice pentru <br /> însănătoșirea vieții sociale, politice
-          și economice <br /> în perspectiva anului electoral 2024"
+          Suntem câțiva muncitori care au reușit să-și trezească conștiința de
+          clasă, pas esențial în lupta împotriva opresiunii capitaliste. Scopul
+          nostru este să clarificăm conceptele de bază, și să sugerăm materiale
+          de lectură ✮
         </h1>
       </Link>
 
       {isMenuOpen && (
         <nav
-          className="lg:hidden flex flex-col fixed top-0 w-3/4 h-fit px-5 py-10 justify-start gap-3 bg-red animation-nav transition-all z-20 rounded-ee-[150px]"
+          className="lg:hidden flex flex-col fixed top-0 w-3/4 h-fit px-5 py-10 justify-start gap-3 bg-black animation-nav transition-all z-20 rounded-ee-[150px]"
           ref={nav}
         >
           <button

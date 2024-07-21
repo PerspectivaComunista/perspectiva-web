@@ -34,7 +34,7 @@ export default async function page({ params }: { params: { slug: string } }) {
 
   return (
     <main className="max-w-screen-xl mx-auto p-3 mb-10">
-      <h2 className="text-4xl font-black mt-8 mb-4">Analize</h2>
+      <h2 className="text-4xl font-black mt-8 mb-4">Articol</h2>
       <div className="md:hidden block">
         <Image
           src={analysis.imageUrl}
@@ -55,7 +55,18 @@ export default async function page({ params }: { params: { slug: string } }) {
                 <CopyLink />
               </h2>
               <div className="flex justify-between items-center mt-2">
-                <p className="text-base text-gray-600">{analysis.createdAt}</p>
+                <div className="flex items-center gap-2">
+                  <p className="text-base text-gray-600">
+                    {analysis.createdAt}
+                  </p>
+
+                  <a
+                    href="/"
+                    className=" relative z-10 rounded-full bg-red-200 px-3 py-1.5 font-medium text-gray-700 hover:bg-red-300"
+                  >
+                    Categorie
+                  </a>
+                </div>
                 {/* <p className="text-base text-gray-600 flex gap-1">
                   <HeartIcon className="w-6 text-red-600" />
                 {analysis.likes}
@@ -69,13 +80,12 @@ export default async function page({ params }: { params: { slug: string } }) {
             />
           </div>
 
-          <div className="md:block hidden">
+          <div className="md:block hidden w-[800px] h-96 relative">
             <Image
               src={analysis.imageUrl}
               alt="Posts"
-              className="h-fit object-contain"
-              width={1000}
-              height={1000}
+              className="object-cover"
+              layout="fill"
             />
           </div>
         </div>

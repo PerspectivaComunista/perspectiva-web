@@ -108,12 +108,6 @@ export default async function AboutUs() {
               </Link>
             </div>
           </div>
-
-          <div className="flex flex-col gap-10 mt-5">
-            {members.map((member: Member) => (
-              <MemberTemplate member={member} key={member.name} />
-            ))}
-          </div>
         </div>
 
         <div className="sticky top-10 flex flex-col gap-10 py-4 h-fit">

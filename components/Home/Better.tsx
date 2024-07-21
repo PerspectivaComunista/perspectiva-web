@@ -18,17 +18,6 @@ export default function Better({ lastPost }: { lastPost: Post }) {
           alt={"lastPosts"}
           priority
         />
-        <div className="absolute bg-gray-700 bg-opacity-0 bottom-0 w-full h-3/4 p-4 pt-2 transition-all duration-700 ease-in-out transform translate-y-full group-hover:translate-y-0 group-hover:bg-opacity-85">
-          {lastPost.description && (
-            <p
-              className="text-white text-xs whitespace-break-spaces h-full overflow-hidden"
-              dangerouslySetInnerHTML={{ __html: lastPost.description }}
-            />
-          )}
-        </div>
-        <p className="text-white bg-red text-lg absolute bottom-0 py-1 pl-4 w-full transition-all duration-1000 ease-in-out transform -translate-x-full group-hover:translate-x-0">
-          Vezi postarea &gt;&gt; &gt;
-        </p>
       </Link>
 
       <div className="sm:w-2/3 w-full">
@@ -73,17 +62,6 @@ export default function Better({ lastPost }: { lastPost: Post }) {
           alt={"lastPosts"}
           priority
         />
-        <div className="absolute bg-gray-700 bg-opacity-0 bottom-0 w-full h-3/4 p-4 pt-2 transition-all duration-700 ease-in-out transform translate-y-full group-hover:translate-y-0 group-hover:bg-opacity-85">
-          {lastPost.description && (
-            <p
-              className="text-white text-xs whitespace-break-spaces h-full overflow-hidden"
-              dangerouslySetInnerHTML={{ __html: lastPost.description }}
-            />
-          )}
-        </div>
-        <p className="text-white bg-red text-lg absolute bottom-0 py-1 pl-4 w-full transition-all duration-1000 ease-in-out transform -translate-x-full group-hover:translate-x-0">
-          Vezi postarea &gt;&gt; &gt;
-        </p>
       </Link>
     </div>
   );
