@@ -40,8 +40,8 @@ export default function Library({ posts }: { posts: any[] }) {
           pagination={{ clickable: true }}
         >
           {posts.map((post) => (
-            <SwiperSlide key={post.createdAt} className="overflow-hidden">
-              <Link href={post.href} key={post.id}>
+            <SwiperSlide key={post.id} className="overflow-hidden">
+              <Link href={post.href}>
                 <article className="flex flex-col items-start justify-between">
                   <div className="relative w-full">
                     <img
@@ -56,12 +56,12 @@ export default function Library({ posts }: { posts: any[] }) {
                       <time dateTime={post.datetime} className="text-gray-500">
                         {post.date}
                       </time>
-                      <a
+                      <Link
                         href={post.category.href}
                         className=" relative z-10 rounded-full bg-red-200 px-3 py-1.5 font-medium text-gray-700 hover:bg-red-300"
                       >
                         {post.category.title}
-                      </a>
+                      </Link>
                     </div>
                     <div className="group relative">
                       <h3 className="mt-1 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">

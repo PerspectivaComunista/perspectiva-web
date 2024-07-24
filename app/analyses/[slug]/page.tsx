@@ -3,6 +3,7 @@ import { JoinSidebar } from "../../../components/Shared";
 import { redirect } from "next/navigation";
 import { getAnalysis } from "../../../server/actions/analyses";
 import CopyLink from "@/components/Shared/CopyLink";
+import Link from "next/link";
 
 export async function generateMetadata({
   params,
@@ -60,12 +61,12 @@ export default async function page({ params }: { params: { slug: string } }) {
                     {analysis.createdAt}
                   </p>
 
-                  <a
+                  <Link
                     href="/"
                     className=" relative z-10 rounded-full bg-red-200 px-3 py-1.5 font-medium text-gray-700 hover:bg-red-300"
                   >
                     Categorie
-                  </a>
+                  </Link>
                 </div>
                 {/* <p className="text-base text-gray-600 flex gap-1">
                   <HeartIcon className="w-6 text-red-600" />

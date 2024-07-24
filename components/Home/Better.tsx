@@ -2,64 +2,40 @@ import { Post } from "../../utils/types";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Better({ lastPost }: { lastPost: Post }) {
+export default function Better({ lastPost }: { lastPost: any }) {
   return (
-    <div className="flex sm:flex-row flex-col first-letter:items-center lg:justify-between lg:gap-10 gap-6 lg:mx-auto">
-      <Link
-        href={lastPost.url}
-        target="_blank"
-        className="sm:hidden block shadow-2xl relative group overflow-hidden"
-      >
-        <Image
-          src={lastPost.imageUrl}
-          className="md:w-1/2 w-full object-contain"
-          width={100}
-          height={100}
-          alt={"lastPosts"}
-          priority
-        />
-      </Link>
+    <div className="flex sm:flex-row flex-col first-letter:items-center lg:justify-between lg:gap-10 gap-6 lg:mx-auto my-4 w-full">
+      <div className="w-full">
+        <div className="mt-2 flex items-center gap-x-4 text-md">
+          <time dateTime={lastPost.datetime} className="text-gray-500">
+            {lastPost.date}
+          </time>
+          <Link
+            href="/"
+            className=" relative z-10 rounded-full bg-red-200 px-3 py-1.5 font-medium text-gray-700 hover:bg-red-300"
+          >
+            {lastPost.category.title}
+          </Link>
+        </div>
+        <div className="group relative">
+          <h3 className="mt-1 mb-3 text-3xl font-extrabold leading-6 text-gray-900 group-hover:text-gray-600">
+            <span className="absolute inset-0" />
+            {lastPost.title}
+          </h3>
+          <p className=" line-clamp-3 text-xl mb-1 leading-5 text-gray-600">
+            {lastPost.description}
+          </p>
+        </div>
 
-      <div className="sm:w-2/3 w-full">
-        <Link href="/manifest">
-          <h2 className="text-4xl font-black hover:text-gray-500">
-            Ne mai facem bine? DA!
-          </h2>
-        </Link>
-
-        <h4 className="my-4 text-base">
-          Auzim tot mai des expresia ”nu ne mai facem bine!”, dar resemnarea nu
-          este o soluție, pentru că da, ne putem face bine. Suntem prea ocupați
-          de probleme, ca să mai căutăm soluții, dar ele există și încep cu
-          câteva momente de reflecție, cu încercarea de a avea încredere că mai
-          există oameni onești care acum, în ceasul al 12-lea, pot construi o
-          alternativă. Nu e chiar atât de greu, trebuie doar să ne găsim busola,
-          iar ea se află chiar lângă noi, în jurul nostru, este familia,
-          anturajul, sunt cei pentru care sărim imediat în ajutor la greu și cu
-          care împărțim momentele de bucurie. Hai sa extindem toate astea la
-          nivel de comunitate, de societate, să reclădim încrederea în cel mai
-          transparent mod posibil pentru a implementa aceste principii ale
-          fraternității în toate aspectele societății.
-        </h4>
-
-        <Link href="/manifest">
-          <h5 className="text-lg underline hover:text-gray-500">
-            -&gt; Manifestul nostru
-          </h5>
-        </Link>
+        <p className="text-gray-600 text-lg">de {lastPost.author.role}</p>
       </div>
-
-      <Link
-        href={lastPost.url}
-        target="_blank"
-        className="sm:flex items-center justify-center sm:w-1/3 w-1/2 hidden shadow-xl relative group overflow-hidden"
-      >
+      <Link href="/" className="w-2/3">
         <Image
           src={lastPost.imageUrl}
-          className="object-contain"
-          width={500}
-          height={500}
-          alt={"lastPosts"}
+          alt="Posts"
+          className="w-full shadow-2xl object-cover"
+          width={1000}
+          height={1000}
           priority
         />
       </Link>
