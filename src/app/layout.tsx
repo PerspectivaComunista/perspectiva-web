@@ -6,7 +6,8 @@ import { Toaster } from "sonner";
 
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
-import { Header, Footer } from "../components/Shared";
+import Header from "../components/Shared/Header";
+import Footer from "../components/Shared/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 

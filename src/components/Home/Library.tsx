@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import { Post } from "../../utils/types";
 import Vezi from "../../assets/images/vezi.png";
 
 export default function Library({ posts }: { posts: any[] }) {
