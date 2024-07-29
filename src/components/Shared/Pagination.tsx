@@ -22,7 +22,6 @@ const PaginationControls = ({
 
   const handlePageChange = (pageNumber: SetStateAction<number>) => {
     setCurrentPage(pageNumber);
-    // Here you can also fetch new data based on the page number
   };
 
   return (

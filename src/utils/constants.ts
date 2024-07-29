@@ -16,13 +16,8 @@ const navigation = [
     target: "",
   },
   {
-    name: "Autori",
-    id: "/authors",
-    target: "",
-  },
-  {
     name: "Biblioteca",
-    id: "/biblioteca",
+    id: "/library",
     target: "",
   },
   {

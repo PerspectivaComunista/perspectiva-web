@@ -31,7 +31,7 @@ export default function Header() {
   return (
     <header className="w-full bg-black">
       <div
-        className="flex bg-black bg-fundal mx-auto lg:max-w-screen-xl justify-between items-center px-3 py-6 lg:gap-8 w-full"
+        className="flex mx-auto lg:max-w-screen-xl justify-between items-center px-3 py-6 lg:gap-8 w-full"
         style={{ backgroundPosition: "0 center" }}
       >
         <button
@@ -62,12 +62,10 @@ export default function Header() {
 
         <div className="flex flex-col justify-between">
           <h1 className="lg:text-2xl text-xl text-white pb-6 lg:block hidden">
-            Suntem câțiva muncitori care au reușit <br /> să-și trezească
-            conștiința de clasă, pas esențial <br /> în lupta împotriva
-            opresiunii capitaliste.
+            "Ne trebuie, înainte de toate, un ziar; fără el este imposibilă
             <br />
-            Scopul nostru este să clarificăm conceptele de bază, <br /> și să
-            sugerăm materiale de lectură ✮
+            desfășurarea sistematică a unei ample activități de <br />{" "}
+            propagandă și agitație principială" -- V.I. Lenin
           </h1>
 
           <nav className="lg:flex hidden justify-between items-center gap-6 ">
@@ -97,7 +95,7 @@ export default function Header() {
             alt="Logo"
             width={250}
             height={250}
-            className="object-contain lg:w-60 w-12 h-auto"
+            className="object-contain lg:w-40 w-12 h-auto"
             priority
           />
         </Link>

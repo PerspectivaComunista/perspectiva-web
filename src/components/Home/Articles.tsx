@@ -83,9 +83,12 @@ export default function Articles({
                       <span className="absolute inset-0" />
                       {article.title}
                     </h3>
-                    <p className="line-clamp-3 text-sm mb-1 leading-5 text-gray-600">
-                      {article.text.slice(0, 150)}...
-                    </p>
+                    <p
+                      className="line-clamp-3 text-sm mb-1 leading-5 text-gray-600"
+                      dangerouslySetInnerHTML={{
+                        __html: article.text.slice(0, 150) + "...",
+                      }}
+                    ></p>
                   </Link>
                   <Link
                     href={"/articles/" + article.slug}
