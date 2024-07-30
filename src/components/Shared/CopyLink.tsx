@@ -14,7 +14,7 @@ export default function CopyLink() {
   return (
     <div className="inline">
       <LinkIcon
-        className="inline ml-3 w-14 text-red cursor-pointer"
+        className="inline sm:ml-3 sm:w-14 w-10 text-red cursor-pointer"
         onClick={() => copylink()}
       />
     </div>

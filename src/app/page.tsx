@@ -27,7 +27,6 @@ export default async function Home() {
   const authors = await getAuthor();
   return (
     <main className="flex flex-col max-w-screen-xl mx-auto items-center p-3">
-      <div className="my-6" />
       <Better lastPost={articles[0]} authors={authors} />
       <div className="my-6" />
       <Articles articles={articles} authors={authors} />

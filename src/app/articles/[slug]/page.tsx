@@ -61,25 +61,30 @@ export default async function page({ params }: { params: { slug: string } }) {
         <div className="flex gap-16">
           <div className="w-full">
             <div className="flex justify-between items-center mt-2 ">
-              <h2 className="text-6xl font-black inline">
+              <h2 className="sm:text-6xl text-4xl font-black inline">
                 {article.title}
-                <CopyLink />
+                <span className="sm:block hidden">
+                  <CopyLink />
+                </span>
               </h2>
             </div>
             <div className="mb-5">
-              <div className="mt-2 flex items-center gap-x-4 text-xs">
+              <div className="mt-2 flex items-center gap-x-4 sm:text-xs text-lg">
                 <time
                   dateTime={article.createdAt}
-                  className="text-gray-600 text-base"
+                  className="text-gray-600 sm:text-base text-lg"
                 >
                   {article.createdAt}
                 </time>
                 <Link
                   href={"/category/" + article.category}
-                  className=" relative z-10 rounded-full bg-red-200 px-3 py-1.5 font-medium text-gray-700 hover:bg-red-300"
+                  className=" relative z-10 rounded-full bg-red-200 sm:px-3 px-4 py-1.5 font-medium text-gray-700 hover:bg-red-300"
                 >
                   {article.category}
                 </Link>
+                <span className="sm:hidden block">
+                  <CopyLink />
+                </span>
               </div>
             </div>
           </div>

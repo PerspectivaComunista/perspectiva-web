@@ -10,7 +10,7 @@ export default function Better({
   authors: Author[];
 }) {
   return (
-    <div className="flex sm:flex-row flex-col first-letter:items-center lg:justify-between lg:gap-10 gap-6 lg:mx-auto my-4 w-full">
+    <div className="flex sm:flex-row flex-col-reverse first-letter:items-center lg:justify-between lg:gap-10 gap-6 lg:mx-auto my-4 w-full">
       <div className="w-full">
         <div className="mt-2 flex items-center gap-x-4 text-md">
           <time dateTime={lastPost.createdAt} className="text-gray-500">
@@ -28,7 +28,7 @@ export default function Better({
             <span className="absolute inset-0" />
             {lastPost.title}
           </h3>
-          <p className=" line-clamp-[18] text-xl mb-1 leading-5 text-gray-600">
+          <p className=" line-clamp-[18] sm:text-xl text-base mb-1 leading-5 text-gray-600">
             {lastPost.text}...
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function Better({
           de {authors.find((e) => e.id === lastPost.author)?.shortName}
         </p>
       </div>
-      <Link href="/" className="w-2/3">
+      <Link href="/" className="sm:w-2/3">
         <Image
           src={lastPost.coverUrl}
           alt="Posts"

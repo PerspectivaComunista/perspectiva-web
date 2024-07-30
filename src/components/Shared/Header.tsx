@@ -103,10 +103,9 @@ export default function Header() {
 
       <Link href="/" className="lg:hidden block relative">
         <h1 className="text-base text-white text-left px-4 pb-4">
-          Suntem câțiva muncitori care au reușit să-și trezească conștiința de
-          clasă, pas esențial în lupta împotriva opresiunii capitaliste. Scopul
-          nostru este să clarificăm conceptele de bază, și să sugerăm materiale
-          de lectură ✮
+          "Ne trebuie, înainte de toate, un ziar; fără el este imposibilă
+          desfășurarea sistematică a unei ample activități de propagandă și
+          agitație principială" -- V.I. Lenin
         </h1>
       </Link>
 
