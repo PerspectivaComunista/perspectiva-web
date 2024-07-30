@@ -74,16 +74,14 @@ export default function Header() {
                 href={nav.id}
                 key={nav.id}
                 className={
-                  "hover:scale-110 " +
+                  "hover:scale-110 link link-underline link-underline-black " +
                   (pathname === nav.id || pathname.startsWith(nav.id + "/")
-                    ? " scale-110 font-bold"
+                    ? " scale-110 font-bold link-underline-hover"
                     : "")
                 }
                 target={nav.target}
               >
-                <p className="text-white text-2xl m-0 link link-underline link-underline-black">
-                  {nav.name}
-                </p>
+                <p className="text-white text-2xl m-0 ">{nav.name}</p>
               </Link>
             ))}
           </nav>
@@ -166,10 +164,6 @@ export default function Header() {
               <p className="text-white text-md">{nav.name}</p>
             </Link>
           ))}
-
-          <Link href="https://www.buymeacoffee.com/platformaleft">
-            <p className="text-white text-md">Donează</p>
-          </Link>
         </nav>
       )}
     </header>

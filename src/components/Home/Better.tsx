@@ -28,7 +28,7 @@ export default function Better({
             <span className="absolute inset-0" />
             {lastPost.title}
           </h3>
-          <p className=" line-clamp-[18] sm:text-xl text-base mb-1 leading-5 text-gray-600">
+          <p className=" line-clamp-[12] sm:text-xl text-base mb-1 leading-5 text-gray-600">
             {lastPost.text}...
           </p>
         </div>

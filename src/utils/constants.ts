@@ -15,11 +15,11 @@ const navigation = [
     id: "/articles",
     target: "",
   },
-  {
-    name: "Biblioteca",
-    id: "/library",
-    target: "",
-  },
+  // {
+  //   name: "Biblioteca",
+  //   id: "/library",
+  //   target: "",
+  // },
   {
     name: "Patreon (content exclusiv)",
     id: "https://www.patreon.com/PerspectivaComunista",

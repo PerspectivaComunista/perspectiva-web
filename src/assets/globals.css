@@ -92,6 +92,11 @@ body,
   background-position: 0 100%;
 }
 
+.link-underline-hover {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
+
 @keyframes nav {
   0% {
     transform: translate(-100%, -160%) scale(0.01);
