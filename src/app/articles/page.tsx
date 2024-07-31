@@ -112,6 +112,7 @@ export default async function page({
           hasNextPage={end < articles.length}
           hasPrevPage={start > 0}
           length={articles.length}
+          url="/articles"
         />
       )}
     </main>
