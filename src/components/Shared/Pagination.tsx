@@ -42,9 +42,9 @@ const PaginationControls = ({
           href={`${url}?page=${
             i + 1 === Number(page) ? i + 1 : i + 1
           }&per_page=${perPage}`}
+          key={i} // Adaugă `key` aici
         >
           <button
-            key={i}
             className={
               "px-4 py-1 transition-all rounded-md duration-300 ease-in-out text-xl " +
               (i + 1 === Number(page)
