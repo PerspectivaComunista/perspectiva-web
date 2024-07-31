@@ -15,24 +15,24 @@ export default function page() {
           Postări de pe alte platforme
         </p>
 
-        <div className="m-auto flex items-center justify-between my-20">
+        <div className="m-auto flex sm:flex-row flex-col items-center justify-between my-20 gap-4">
           <Link
             href="/media/instagram"
-            className="w-80 hover:scale-125 transition-all duration-300 ease-in-out"
+            className="sm:w-80 w-32 hover:scale-125 transition-all duration-300 ease-in-out"
           >
             <Image src={Instagram} alt="Instagram" width={400} height={400} />
           </Link>
 
           <Link
             href="/media/tiktok"
-            className="w-80 hover:scale-125 transition-all duration-300 ease-in-out"
+            className="sm:w-80 w-32 hover:scale-125 transition-all duration-300 ease-in-out"
           >
             <Image src={Tiktok} alt="Facebook" width={400} height={400} />
           </Link>
 
           <Link
             href="/media/youtube"
-            className="w-80 hover:scale-125 transition-all duration-300 ease-in-out"
+            className="sm:w-80 w-32 hover:scale-125 transition-all duration-300 ease-in-out"
           >
             <Image src={Youtube} alt="Facebook" width={400} height={400} />
           </Link>
