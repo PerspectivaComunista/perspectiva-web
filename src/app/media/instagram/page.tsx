@@ -9,7 +9,14 @@ export default async function page({
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  const posts = (await getInstagramPosts()) as Instagram[];
+  let posts: Instagram[] = [];
+
+  try {
+    posts = (await getInstagramPosts()) as Instagram[];
+  } catch (error) {
+    console.error("Failed to fetch Instagram posts:", error);
+  }
+
   const postsImages = posts.filter(
     (e) => e.type === "IMAGE" || e.type === "CAROUSEL_ALBUM"
   );
@@ -19,10 +26,10 @@ export default async function page({
   const start = (Number(page) - 1) * Number(perPage);
   const end = start + Number(perPage);
 
-  const entries = postsImages.slice(start, end);
+  const entries = postsImages.slice(start, end) || [];
   return (
     <main className="max-w-screen-xl mx-auto p-3 mb-10">
-      <h2 className="text-4xl font-black py-8">Postări</h2>
+      <h2 className="text-4xl font-black py-8">Postări Instagram</h2>
 
       <div className="sm:grid flex flex-col lg:grid-cols-4 md:grid-cols-3 w-full sm:grid-cols-2 gap-4 justify-items-center justify-between items-center mb-20">
         {entries.map((post) => (
