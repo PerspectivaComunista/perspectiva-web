@@ -15,3 +15,12 @@ export type Article = {
   id: string;
   category: string;
 };
+
+export type Instagram = {
+  imageUrl: string;
+  createdAt: string;
+  url: string;
+  id: string;
+  type: string;
+  description: string;
+};

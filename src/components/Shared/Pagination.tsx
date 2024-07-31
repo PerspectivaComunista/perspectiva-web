@@ -8,10 +8,12 @@ const PaginationControls = ({
   hasNextPage,
   hasPrevPage,
   length,
+  url,
 }: {
   hasNextPage: boolean;
   hasPrevPage: boolean;
   length: number;
+  url: string;
 }) => {
   const searchParams = useSearchParams();
 
@@ -27,7 +29,7 @@ const PaginationControls = ({
   return (
     <div className="flex gap-2 justify-center items-center">
       {hasPrevPage && (
-        <Link href={`/posts?page=${Number(page) - 1}&per_page=${perPage}`}>
+        <Link href={`${url}?page=${Number(page) - 1}&per_page=${perPage}`}>
           <ChevronLeftIcon className="w-8 h-8 text-black" />
         </Link>
       )}
@@ -37,7 +39,7 @@ const PaginationControls = ({
       </div> */}
       {[...Array(totalPages)].map((_, i) => (
         <Link
-          href={`/posts?page=${
+          href={`${url}?page=${
             i + 1 === Number(page) ? i + 1 : i + 1
           }&per_page=${perPage}`}
         >
@@ -56,7 +58,7 @@ const PaginationControls = ({
       ))}
 
       {hasNextPage && (
-        <Link href={`/posts?page=${Number(page) + 1}&per_page=${perPage}`}>
+        <Link href={`${url}?page=${Number(page) + 1}&per_page=${perPage}`}>
           <ChevronRightIcon className="w-8 h-8 text-black" />
         </Link>
       )}

@@ -21,6 +21,11 @@ const navigation = [
   //   target: "",
   // },
   {
+    name: "Media",
+    id: "/media",
+    target: "",
+  },
+  {
     name: "Patreon (content exclusiv)",
     id: "https://www.patreon.com/PerspectivaComunista",
     target: "_blank",
