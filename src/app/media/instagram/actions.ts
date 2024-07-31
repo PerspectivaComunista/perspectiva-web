@@ -6,6 +6,7 @@ export default async function getInstagramPosts(): Promise<Instagram[] | any> {
   try {
     const accessToken = process.env.INSTAGRAM_KEY;
     if (!accessToken) {
+      console.error("Missing Instagram access token");
       throw new Error("Missing Instagram access token");
     }
 
@@ -16,15 +17,21 @@ export default async function getInstagramPosts(): Promise<Instagram[] | any> {
 
     if (!response.ok) {
       const errorText = await response.text();
+      console.error(
+        `HTTP error! status: ${response.status}, response: ${errorText}`
+      );
       throw new Error(
         `HTTP error! status: ${response.status}, response: ${errorText}`
       );
     }
 
     const json = await response.json();
+    console.log("API response:", json);
+
     const jsonData = json.data;
 
     if (!jsonData) {
+      console.error("API response does not contain 'data' property");
       throw new Error("API response does not contain 'data' property");
     }
 

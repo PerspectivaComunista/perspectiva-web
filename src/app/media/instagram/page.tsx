@@ -15,7 +15,9 @@ export default function page({
 
   useEffect(() => {
     async function fetchPosts() {
+      console.log("Fetching Instagram posts...");
       const data = await getInstagramPosts();
+      console.log("Fetched posts:", data);
       setPosts(data);
     }
     fetchPosts();
