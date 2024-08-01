@@ -1,38 +1,40 @@
-"use client";
+const { getFirestore } = require("firebase-admin/firestore");
 import Image from "next/image";
 import Link from "next/link";
-import getInstagramPosts from "./actions";
-import { Instagram } from "@/utils/types";
 import Pagination from "@/components/Shared/Pagination";
 import { useEffect, useState } from "react";
+import { firebaseServerApp } from "@/utils/firebase/server";
 
-export default function page({
+interface Instagram {
+  imageUrl: string;
+  url: string;
+  id: string;
+  createdAt: string;
+}
+
+const getInstagramPosts = async (): Promise<Instagram[]> => {
+  const db = getFirestore(firebaseServerApp);
+  const response = await db.collection("objectives").get();
+  const objectives = response.docs.map((doc: any) => doc.data()) as Instagram[];
+  objectives.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
+
+  return objectives;
+};
+
+export default async function page({
   searchParams,
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  const [posts, setPosts] = useState<Instagram[]>([]);
+  const posts = await getInstagramPosts();
 
-  useEffect(() => {
-    async function fetchPosts() {
-      console.log("Fetching Instagram posts...");
-      const data = await getInstagramPosts();
-      console.log("Fetched posts:", data);
-      setPosts(data);
-    }
-    fetchPosts();
-  }, []);
-
-  const postsImages = posts.filter(
-    (e) => e.type === "IMAGE" || e.type === "CAROUSEL_ALBUM"
-  );
   const page = searchParams["page"] ?? "1";
   const perPage = searchParams["per_page"] ?? "12";
 
   const start = (Number(page) - 1) * Number(perPage);
   const end = start + Number(perPage);
 
-  const entries = postsImages.slice(start, end);
+  const entries = posts.slice(start, end);
   return (
     <main className="max-w-screen-xl mx-auto p-3 mb-10">
       <h2 className="text-4xl font-black py-8">Postări Instagram</h2>
@@ -53,25 +55,17 @@ export default function page({
               alt={"posts"}
               priority
             />
-            <div className="absolute bg-gray-700 bg-opacity-0 bottom-0 w-full h-3/4 p-4 pt-2 transition-all duration-700 ease-in-out transform translate-y-full group-hover:translate-y-0 group-hover:bg-opacity-85">
-              {post.description && (
-                <p
-                  className="text-white text-xs whitespace-break-spaces h-full overflow-hidden"
-                  dangerouslySetInnerHTML={{ __html: post.description }}
-                />
-              )}
-            </div>
             <p className="text-white bg-red text-lg absolute bottom-0 py-1 pl-4 w-full transition-all duration-1000 ease-in-out transform -translate-x-full group-hover:translate-x-0">
               Vezi postarea &gt;&gt; &gt;
             </p>
           </Link>
         ))}
       </div>
-      {postsImages.length > 12 && (
+      {posts.length > 12 && (
         <Pagination
-          hasNextPage={end < postsImages.length}
+          hasNextPage={end < posts.length}
           hasPrevPage={start > 0}
-          length={postsImages.length}
+          length={posts.length}
           url="/media/instagram"
         />
       )}
