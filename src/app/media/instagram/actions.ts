@@ -1,10 +1,8 @@
-"use server";
-
 import { Instagram } from "@/utils/types";
 
 export default async function getInstagramPosts(): Promise<Instagram[] | any> {
   try {
-    const accessToken = process.env.INSTAGRAM_KEY;
+    const accessToken = process.env.NEXT_PUBLIC_INSTAGRAM_KEY;
     if (!accessToken) {
       console.error("Missing Instagram access token");
       throw new Error("Missing Instagram access token");
@@ -50,6 +48,10 @@ export default async function getInstagramPosts(): Promise<Instagram[] | any> {
     );
 
     console.log("Instagram posts:", instagram);
+    console.log(process.env.INSTAGRAM_KEY);
+
+    console.log("Response status:", response.status);
+    console.log("Response body:", await response.text());
 
     return instagram.sort((a, b) => {
       return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
