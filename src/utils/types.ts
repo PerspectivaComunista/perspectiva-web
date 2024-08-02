@@ -15,3 +15,10 @@ export type Article = {
   id: string;
   category: string;
 };
+
+export type Post = {
+  imageUrl: string;
+  url: string;
+  id: string;
+  createdAt: string;
+};

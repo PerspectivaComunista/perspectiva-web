@@ -6,13 +6,13 @@ import { useEffect, useState } from "react";
 import { firebaseServerApp } from "@/utils/firebase/server";
 import { Post } from "@/utils/types";
 
-const getInstagramPosts = async (): Promise<Post[]> => {
+const getTiktoks = async (): Promise<Post[]> => {
   const db = getFirestore(firebaseServerApp);
-  const response = await db.collection("instagram").get();
-  const instagram = response.docs.map((doc: any) => doc.data()) as Post[];
-  instagram.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
+  const response = await db.collection("tiktok").get();
+  const tiktok = response.docs.map((doc: any) => doc.data()) as Post[];
+  tiktok.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
 
-  return instagram;
+  return tiktok;
 };
 
 export default async function page({
@@ -20,7 +20,7 @@ export default async function page({
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  const posts = await getInstagramPosts();
+  const posts = await getTiktoks();
 
   const page = searchParams["page"] ?? "1";
   const perPage = searchParams["per_page"] ?? "12";
@@ -31,7 +31,7 @@ export default async function page({
   const entries = posts.slice(start, end);
   return (
     <main className="max-w-screen-xl mx-auto p-3 mb-10">
-      <h2 className="text-4xl font-black py-8">Postări Instagram</h2>
+      <h2 className="text-4xl font-black py-8">Postări Tiktok</h2>
 
       <div className="sm:grid flex flex-col lg:grid-cols-4 md:grid-cols-3 w-full sm:grid-cols-2 gap-4 justify-items-center justify-between items-center mb-20">
         {entries.map((post: Post) => (
@@ -60,7 +60,7 @@ export default async function page({
           hasNextPage={end < posts.length}
           hasPrevPage={start > 0}
           length={posts.length}
-          url="/media/instagram"
+          url="/media/tiktok"
         />
       )}
     </main>
