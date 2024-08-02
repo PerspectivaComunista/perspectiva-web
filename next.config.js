@@ -5,7 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "firebasestorage.googleapis.com", // if your website has no www, drop it
+        hostname: "firebasestorage.googleapis.com", // existing pattern
       },
       {
         protocol: "http",
@@ -14,6 +14,11 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "**.cdninstagram.com",
+      },
+      {
+        protocol: "https",
+        hostname: "storage.googleapis.com",
+        pathname: "/**",
       },
     ],
   },
