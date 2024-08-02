@@ -14,11 +14,11 @@ interface Instagram {
 
 const getInstagramPosts = async (): Promise<Instagram[]> => {
   const db = getFirestore(firebaseServerApp);
-  const response = await db.collection("objectives").get();
-  const objectives = response.docs.map((doc: any) => doc.data()) as Instagram[];
-  objectives.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
+  const response = await db.collection("instagram").get();
+  const instagram = response.docs.map((doc: any) => doc.data()) as Instagram[];
+  instagram.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
 
-  return objectives;
+  return instagram;
 };
 
 export default async function page({
