@@ -15,7 +15,7 @@ const getInstagramPosts = async (): Promise<Post[]> => {
   return instagram;
 };
 
-export default async function page({
+export default async function Page({
   searchParams,
 }: {
   searchParams: { [key: string]: string | string[] | undefined };

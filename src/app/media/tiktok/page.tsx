@@ -15,7 +15,7 @@ const getTiktoks = async (): Promise<Post[]> => {
   return tiktok;
 };
 
-export default async function page({
+export default async function Page({
   searchParams,
 }: {
   searchParams: { [key: string]: string | string[] | undefined };

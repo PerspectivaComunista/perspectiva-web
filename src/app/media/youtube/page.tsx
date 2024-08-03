@@ -15,7 +15,7 @@ const getYoutubes = async (): Promise<Post[]> => {
   return youtube;
 };
 
-export default async function page({
+export default async function Page({
   searchParams,
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
