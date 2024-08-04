@@ -39,13 +39,13 @@ export default async function Page({
             href={post.url}
             target="_blank"
             key={post.url}
-            className="shadow-xl relative group overflow-hidden"
+            className="shadow-xl relative group overflow-hidden h-[480px] w-[270px]"
           >
             <Image
               src={post.imageUrl}
-              width={300}
-              height={300}
-              className="w-full object-contain"
+              width={270}
+              height={480}
+              className="w-full h-full object-center object-fill"
               alt={"posts"}
               priority
             />
