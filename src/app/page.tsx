@@ -1,9 +1,12 @@
 const { getFirestore } = require("firebase-admin/firestore");
 import Better from "../components/Home/Better";
 import Articles from "../components/Home/Articles";
-import { Article, Author } from "@/utils/types";
+import { Article, Author, Post } from "@/utils/types";
 import { collection } from "firebase/firestore";
 import { firebaseServerApp } from "@/utils/firebase/server";
+import Instagram from "@/components/Home/Instagram";
+import Tiktok from "@/components/Home/Tiktok";
+import Youtube from "@/components/Home/Youtube";
 
 const getArticles = async (): Promise<Article[]> => {
   const db = getFirestore(firebaseServerApp);
@@ -12,6 +15,33 @@ const getArticles = async (): Promise<Article[]> => {
   articles.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
 
   return articles;
+};
+
+const getInstagram = async (): Promise<Post[]> => {
+  const db = getFirestore(firebaseServerApp);
+  const response = await db.collection("instagram").limit(6).get();
+  const instagram = response.docs.map((doc: any) => doc.data()) as Post[];
+  instagram.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
+
+  return instagram;
+};
+
+const getTiktok = async (): Promise<Post[]> => {
+  const db = getFirestore(firebaseServerApp);
+  const response = await db.collection("tiktok").limit(6).get();
+  const tiktok = response.docs.map((doc: any) => doc.data()) as Post[];
+  tiktok.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
+
+  return tiktok;
+};
+
+const getYoutube = async (): Promise<Post[]> => {
+  const db = getFirestore(firebaseServerApp);
+  const response = await db.collection("youtube").limit(6).get();
+  const youtube = response.docs.map((doc: any) => doc.data()) as Post[];
+  youtube.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
+
+  return youtube;
 };
 
 const getAuthor = async (): Promise<Author[]> => {
@@ -24,13 +54,21 @@ const getAuthor = async (): Promise<Author[]> => {
 
 export default async function Home() {
   const articles = await getArticles();
+  const instagrams = await getInstagram();
   const authors = await getAuthor();
+  const tiktoks = await getTiktok();
+  const youtubes = await getYoutube();
   return (
     <main className="flex flex-col max-w-screen-xl mx-auto items-center p-3">
       <Better lastPost={articles[0]} authors={authors} />
       <div className="my-6" />
       <Articles articles={articles} authors={authors} />
       <div className="my-6" />
+      <Youtube posts={youtubes} />
+      <div className="my-6" />
+      <Tiktok posts={tiktoks} />
+      <div className="my-6" />
+      <Instagram posts={instagrams} />
       {/* <Library posts={posts} /> */}
       <div className="my-6" />
     </main>

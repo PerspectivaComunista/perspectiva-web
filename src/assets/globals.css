@@ -53,14 +53,6 @@ body,
   color: #d6001d;
 }
 
-.text-demos {
-  color: #90004c;
-}
-
-.bg-demos {
-  background-color: #90004c;
-}
-
 ::-moz-selection {
   /* Code for Firefox */
   color: white;

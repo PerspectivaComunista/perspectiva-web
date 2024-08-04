@@ -36,10 +36,6 @@ export default function Articles({
               slidesPerView: 3,
               spaceBetween: 10,
             },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 20,
-            },
           }}
           // loop={true}
           speed={5000}
@@ -47,7 +43,7 @@ export default function Articles({
           pagination={{ clickable: true }}
         >
           {articles.map((article: Article) => (
-            <SwiperSlide key={article.id} className="overflow-hidden">
+            <SwiperSlide key={article.id} className="overflow-hidden ">
               <article className="flex flex-col items-start justify-between">
                 <Link
                   href={"/articles/" + article.slug}
