@@ -7,7 +7,6 @@ export default function page() {
       <h2 className="text-4xl font-black mt-8 mb-4 border-b-4 border-[#d6001d] w-fit">
         Cine suntem noi?
       </h2>
-
       <p className="text-xl">
         Perspectiva Comunistă este numele adoptat de către organizația noastră
         cât și al organului nostru de presă, acest site. Noi suntem o
@@ -17,7 +16,6 @@ export default function page() {
         scop final.
       </p>
       <br />
-
       <div className="text-xl italic">
         "Ne trebuie, înainte de toate, un ziar; fără el este imposibilă
         desfășurarea sistematică a unei ample activități de propagandă și
@@ -27,10 +25,9 @@ export default function page() {
         populației s-a trezit interesul pentru politică, pentru problemele
         socialismului."
       </div>
-      <div className="text-xl italic text-right">
+      <div className="text-lg italic text-right ">
         --Vladimir Lenin, De unde să începem
       </div>
-
       <h2 className="text-4xl font-black mt-8 mb-4 border-b-4 border-[#d6001d] w-fit">
         Suntem Comuniști:
       </h2>
@@ -42,7 +39,6 @@ export default function page() {
         socialistă.
       </p>
       <br />
-
       <div className="text-xl italic">
         "Comunismul pentru noi nu este o stare de lucruri care trebuie
         stabilită, un ideal la care realitatea va trebui să se adapteze. Numim
@@ -50,7 +46,7 @@ export default function page() {
         lucrurilor. Condițiile acestei mișcări rezultă din premisele existente
         acum."
       </div>
-      <div className="text-xl italic text-right">
+      <div className="text-lg italic text-right ">
         --Karl Marx, Ideologia Germană
       </div>
       <h2 className="text-4xl font-black mt-8 mb-4 border-b-4 border-[#d6001d] w-fit">
@@ -65,7 +61,6 @@ export default function page() {
         Proletariatului.
       </p>
       <br />
-
       <div className="text-xl italic">
         "Dacă te uiți la ultimul capitol din Oprezecelea Brumaire, vei descoperi
         că spun că următoarea încercare a revoluției franceze nu va mai fi, ca
@@ -74,7 +69,7 @@ export default function page() {
         adevărată revoluție populară de pe continent. Și asta încearcă eroicii
         noștri tovarăși din Paris."
       </div>
-      <div className="text-xl italic text-right">
+      <div className="text-lg italic text-right ">
         --Karl Marx, Scrisoare către Kugelmann, Aprilie 1871
       </div>
       <h2 className="text-4xl font-black mt-8 mb-4 border-b-4 border-[#d6001d] w-fit">
@@ -88,16 +83,16 @@ export default function page() {
         contribuții de Iosef Stalin, adică suntem Marxiști-Leniniști.
       </p>
       <br />
-
       <div className="text-xl italic">
         "Leninismul este marxismul epocii imperialismului și a revoluției
         proletare. Mai exact, leninismul este teoria și tactica revoluției
         proletare în general, teoria și tactica dictaturii proletariatului în
         special."
       </div>
-      <div className="text-xl italic text-right">
+      <div className="text-lg italic text-right ">
         --Iosef Stalin, Bazele Leninismului
       </div>
+      <br className="mt-8" />
       <p className="text-xl">
         Ne opunem revizioniștilor din a doua jumătate a secolului trecut precum
         N. Hrușcev, L. Brejnev și Deng Xiaoping, adică suntem Marxiști-Leniniști
@@ -108,7 +103,6 @@ export default function page() {
         numărul 20 al publicație A World to Win.
       </p>
       <br />
-
       <div className="text-xl italic">
         "În cursul revoluției chineze, Mao a dezvoltat marxismul-leninismul în
         multe domenii importante. Dar în creuzetul Marii Revoluții Culturale
@@ -121,7 +115,7 @@ export default function page() {
         nu poate exista marxism-leninism. Într-adevăr, a nega maoismul înseamnă
         a nega însuși marxismul-leninismul."
       </div>
-      <div className="text-xl italic text-right">
+      <div className="text-lg italic text-right ">
         --RIM, Trăiască Marxism-Leninism-Maoism-ul (1993)
       </div>
       <h2 className="text-4xl font-black mt-8 mb-4 border-b-4 border-[#d6001d] w-fit">
@@ -136,7 +130,6 @@ export default function page() {
         există Perspectiva Comunistă pentru a trezi și conecta aceste elemente.
       </p>
       <br />
-
       <div className="text-xl italic">
         "Comuniştii sînt, aşadar, din punct de vedere practic, partea cea mai
         hotărîtă a partidelor muncitoreşti din toate ţările, partea care împinge
@@ -147,7 +140,7 @@ export default function page() {
         constituirea proletariatului ca clasă, răsturnarea dominaţiei
         burgheziei, cucerirea puterii politice de către proletariat."
       </div>
-      <div className="text-xl italic text-right">
+      <div className="text-lg italic text-right ">
         --Karl Marx și Friedrich Engels, Manifestul Partidului Comunist
       </div>
     </main>
