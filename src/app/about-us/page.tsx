@@ -8,12 +8,12 @@ export default function page() {
         Cine suntem noi?
       </h2>
       <p className="text-xl">
-        Perspectiva Comunistă este numele adoptat de către organizația noastră
+        Perspectiva Comunistă este numele adoptat de către organizația noastră,
         cât și al organului nostru de presă, acest site. Noi suntem o
         organizație Comunistă, Marxist-Leninist-Maoistă, Revoluționară al cărui
-        scop imediat este creerea unui Partid Proletar de Avangardă, iar scopul
-        publicației noastre de a fi vector al agitației și propagandei cu acest
-        scop final.
+        scop imediat este crearea unui Partid Proletar de Avangardă, iar scopul
+        publicației noastre este de a fi vector al agitației și propagandei cu
+        acest scop final.
       </p>
       <br />
       <div className="text-xl italic">
@@ -53,12 +53,11 @@ export default function page() {
         Suntem Revoluționari:
       </h2>
       <p className="text-xl">
-        Noi realizăm că orânduirea actuală Capitalistă nu poate fi îmbunătățită,
+        Noi realizăm că orânduirea actuală capitalistă nu poate fi îmbunătățită,
         remediată sau transformată gradual prin metode parlamentare, acest lucru
-        în cel mai bun caz ar aduce concensiuni temporare, pe care clasa
-        burgheză le poate retrage oricând. Noi milităm pentru distrugerea
-        completă a Mașinăriei Statului Burghez și înlocuirea ei cu Statul
-        Proletariatului.
+        în cel mai bun caz ar aduce concesiuni temporare, pe care clasa burgheză
+        le poate retrage oricând. Noi milităm pentru distrugerea completă a
+        Mașinăriei Statului Burghez și înlocuirea ei cu Statul Proletariatului.
       </p>
       <br />
       <div className="text-xl italic">
@@ -77,10 +76,10 @@ export default function page() {
       </h2>
       <p className="text-xl">
         Bazele teoretice ale noastre sunt cele stabilite de Karl Marx și
-        Friedrich Engels, adică suntem Marxiști. Acceptăm contribuțiile făcute
-        de Vladimir Lenin, anume, aplicarea Marxismului la perioada
-        Imperialismului și a Revoluției Proletare, și sinteza acestor
-        contribuții de Iosef Stalin, adică suntem Marxiști-Leniniști.
+        Friedrich Engels, adică suntem marxiști. Acceptăm contribuțiile făcute
+        de Vladimir Lenin, anume, aplicarea marxismului la perioada
+        imperialismului și a revoluției proletare, și sinteza acestor
+        contribuții de Iosef Stalin, adică suntem marxiști-leniniști.
       </p>
       <br />
       <div className="text-xl italic">
@@ -94,13 +93,13 @@ export default function page() {
       </div>
       <br className="mt-8" />
       <p className="text-xl">
-        Ne opunem revizioniștilor din a doua jumătate a secolului trecut precum
-        N. Hrușcev, L. Brejnev și Deng Xiaoping, adică suntem Marxiști-Leniniști
-        Anti-Revizioniști. Aceptăm importantele contribuții ale lui Mao Zedong
-        în toate cele trei ramuri ale Marxismului, adică urmăm
-        Marxism-Leninism-Gândirea Mao Zedong. Și urmăm sinteza acestora drept al
-        treilea stadiu al Marxismului după cum a fost descris de RIM în 1995 în
-        numărul 20 al publicație A World to Win.
+        Ne opunem revizioniștilor din a doua jumătate a secolului trecut, precum
+        N. Hrușciov, L. Brejnev și Deng Xiaoping, adică suntem
+        marxiști-leniniști anti-revizioniști. Acceptăm importantele contribuții
+        ale lui Mao Zedong în toate cele trei ramuri ale marxismului, adică
+        urmăm marxism-leninism-gândirea Mao Zedong. Și urmăm sinteza acestora
+        drept al treilea stadiu al marxismului, după cum a fost descris de RIM
+        în 1995 în numărul 20 al publicației A World to Win.
       </p>
       <br />
       <div className="text-xl italic">
@@ -124,20 +123,20 @@ export default function page() {
       <p className="text-xl">
         Noi realizăm că, pentru ca interesele proletariatului să fie
         reprezentate și pentru ca acesta să își joace rolul istoric de a
-        construi Socialismul, este necesară trezirea elementelor cele mai
+        construi socialismul, este necesară trezirea elementelor cele mai
         conștiente ale proletariatului și concentrarea lor într-un Partid
         Proletar de Avangardă care să poată duce lupta de clasă. Spre acest scop
-        există Perspectiva Comunistă pentru a trezi și conecta aceste elemente.
+        există Perspectiva Comunistă, pentru a trezi și conecta aceste elemente.
       </p>
       <br />
       <div className="text-xl italic">
-        "Comuniştii sînt, aşadar, din punct de vedere practic, partea cea mai
-        hotărîtă a partidelor muncitoreşti din toate ţările, partea care împinge
-        mereu înainte; din punct de vedere teoretic, faţă de restul masei
-        proletariatului ei au superioritatea de a înţelege limpede condiţiile,
-        mersul şi rezultatele generale ale mişcării proletare. Scopul imediat al
-        comuniştilor este acelaşi ca şi al tuturor celorlalte partide proletare:
-        constituirea proletariatului ca clasă, răsturnarea dominaţiei
+        "Comuniștii sunt, așadar, din punct de vedere practic, partea cea mai
+        hotărâtă a partidelor muncitorești din toate țările, partea care împinge
+        mereu înainte; din punct de vedere teoretic, față de restul masei
+        proletariatului ei au superioritatea de a înțelege limpede condițiile,
+        mersul și rezultatele generale ale mișcării proletare. Scopul imediat al
+        comuniștilor este același ca și al tuturor celorlalte partide proletare:
+        constituirea proletariatului ca clasă, răsturnarea dominației
         burgheziei, cucerirea puterii politice de către proletariat."
       </div>
       <div className="text-lg italic text-right ">
