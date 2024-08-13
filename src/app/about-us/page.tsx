@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function page() {
@@ -25,9 +26,13 @@ export default function page() {
         populației s-a trezit interesul pentru politică, pentru problemele
         socialismului."
       </div>
-      <div className="text-lg italic text-right ">
+      <Link
+        href="https://www.marxists.org/archive/lenin/works/1901/may/04.htm"
+        target="_blank"
+        className="text-lg italic text-right "
+      >
         --Vladimir Lenin, De unde să începem
-      </div>
+      </Link>
       <h2 className="text-4xl font-black mt-8 mb-4 border-b-4 border-[#d6001d] w-fit">
         Suntem Comuniști:
       </h2>
@@ -46,9 +51,13 @@ export default function page() {
         lucrurilor. Condițiile acestei mișcări rezultă din premisele existente
         acum."
       </div>
-      <div className="text-lg italic text-right ">
+      <Link
+        href="https://www.marxists.org/romana/m-e/opere/Karl-Marx-Friedrich-Engels-Opere-vol-03.pdf"
+        target="_blank"
+        className="text-lg italic text-right "
+      >
         --Karl Marx, Ideologia Germană
-      </div>
+      </Link>
       <h2 className="text-4xl font-black mt-8 mb-4 border-b-4 border-[#d6001d] w-fit">
         Suntem Revoluționari:
       </h2>
@@ -68,9 +77,13 @@ export default function page() {
         adevărată revoluție populară de pe continent. Și asta încearcă eroicii
         noștri tovarăși din Paris."
       </div>
-      <div className="text-lg italic text-right ">
+      <Link
+        href="https://www.marxists.org/romana/m-e/scrisori/71-04-12.htm"
+        target="_blank"
+        className="text-lg italic text-right "
+      >
         --Karl Marx, Scrisoare către Kugelmann, Aprilie 1871
-      </div>
+      </Link>
       <h2 className="text-4xl font-black mt-8 mb-4 border-b-4 border-[#d6001d] w-fit">
         Suntem Marxiști-Leniniști-Maoiști:
       </h2>
@@ -88,9 +101,13 @@ export default function page() {
         proletare în general, teoria și tactica dictaturii proletariatului în
         special."
       </div>
-      <div className="text-lg italic text-right ">
+      <Link
+        href="https://www.marxists.org/romana/stalin/1929/Stalin-Problema-nationala-si-leninismul.pdf"
+        target="_blank"
+        className="text-lg italic text-right "
+      >
         --Iosef Stalin, Bazele Leninismului
-      </div>
+      </Link>
       <br className="mt-8" />
       <p className="text-xl">
         Ne opunem revizioniștilor din a doua jumătate a secolului trecut, precum
@@ -114,9 +131,13 @@ export default function page() {
         nu poate exista marxism-leninism. Într-adevăr, a nega maoismul înseamnă
         a nega însuși marxismul-leninismul."
       </div>
-      <div className="text-lg italic text-right ">
+      <Link
+        href="https://www.bannedthought.net/International/RIM/AWTW/1995-20/ll_mlm_20_eng.htm"
+        target="_blank"
+        className="text-lg italic text-right "
+      >
         --RIM, Trăiască Marxism-Leninism-Maoism-ul (1993)
-      </div>
+      </Link>
       <h2 className="text-4xl font-black mt-8 mb-4 border-b-4 border-[#d6001d] w-fit">
         Suntem un Precursor al Partidului Proletar de Avangardă:
       </h2>
@@ -139,9 +160,13 @@ export default function page() {
         constituirea proletariatului ca clasă, răsturnarea dominației
         burgheziei, cucerirea puterii politice de către proletariat."
       </div>
-      <div className="text-lg italic text-right ">
+      <Link
+        href="https://www.marxists.org/romana/m-e/1848/manifest/c02.htm"
+        target="_blank"
+        className="text-lg italic text-right "
+      >
         --Karl Marx și Friedrich Engels, Manifestul Partidului Comunist
-      </div>
+      </Link>
     </main>
   );
 }
