@@ -6,30 +6,30 @@ export default function page() {
   return (
     <main className="max-w-screen-xl mx-auto p-3 mb-10">
       <h2 className="text-4xl font-black mt-8 mb-4 border-b-4 border-[#d6001d] w-fit">
-        Cine suntem noi?
+        Suntem Perspectiva Comunistă;
       </h2>
       <p className="text-xl">
         Perspectiva Comunistă este numele adoptat de către organizația noastră,
         cât și al organului nostru de presă, acest site. Noi suntem o
         organizație Comunistă, Marxist-Leninist-Maoistă, Revoluționară al cărui
         scop imediat este crearea unui Partid Proletar de Avangardă, iar scopul
-        publicației noastre este de a fi vector al agitației și propagandei cu
-        acest scop final.
+        acestei publicații este de a fi vector al agitației și propagandei, ce
+        are acest scop final.
       </p>
       <br />
       <div className="text-xl italic">
-        "Ne trebuie, înainte de toate, un ziar; fără el este imposibilă
+        „Ne trebuie, înainte de toate, un ziar; fără el este imposibilă
         desfășurarea sistematică a unei ample activități de propagandă și
         agitație principială, consecventă, care constituie o sarcină permanentă
         și principală a social-democrației, în general, și o sarcină deosebit de
         actuală în momentul de față, când în straturile cele mai largi ale
         populației s-a trezit interesul pentru politică, pentru problemele
-        socialismului."
+        socialismului.”
       </div>
       <Link
         href="https://www.marxists.org/romana/lenin/1901/mai/04.htm"
         target="_blank"
-        className="text-lg italic text-right "
+        className="text-lg italic"
       >
         --Vladimir Lenin, Cu ce să începem?
       </Link>
@@ -45,16 +45,16 @@ export default function page() {
       </p>
       <br />
       <div className="text-xl italic">
-        "Comunismul pentru noi nu este o stare de lucruri care trebuie
+        „Comunismul pentru noi nu este o stare de lucruri care trebuie
         stabilită, un ideal la care realitatea va trebui să se adapteze. Numim
         comunismul adevărata mișcare care desființează starea actuală a
         lucrurilor. Condițiile acestei mișcări rezultă din premisele existente
-        acum."
+        acum.”
       </div>
       <Link
         href="https://www.marxists.org/romana/m-e/opere/Karl-Marx-Friedrich-Engels-Opere-vol-03.pdf"
         target="_blank"
-        className="text-lg italic text-right "
+        className="text-lg italic"
       >
         --Karl Marx, Ideologia Germană
       </Link>
@@ -70,17 +70,17 @@ export default function page() {
       </p>
       <br />
       <div className="text-xl italic">
-        "Dacă te uiți la ultimul capitol din Oprezecelea Brumaire, vei descoperi
+        „Dacă te uiți la ultimul capitol din Oprezecelea Brumaire, vei descoperi
         că spun că următoarea încercare a revoluției franceze nu va mai fi, ca
         până acum, de a transfera mașina birocratic-militară dintr-o mână în
         alta, ci de a o distruge. Iar acest lucru este esențial pentru orice
         adevărată revoluție populară de pe continent. Și asta încearcă eroicii
-        noștri tovarăși din Paris."
+        noștri tovarăși din Paris.”
       </div>
       <Link
         href="https://www.marxists.org/romana/m-e/scrisori/71-04-12.htm"
         target="_blank"
-        className="text-lg italic text-right "
+        className="text-lg italic"
       >
         --Karl Marx, Scrisoare către Kugelmann, Aprilie 1871
       </Link>
@@ -96,15 +96,15 @@ export default function page() {
       </p>
       <br />
       <div className="text-xl italic">
-        "Leninismul este marxismul epocii imperialismului și a revoluției
+        „Leninismul este marxismul epocii imperialismului și a revoluției
         proletare. Mai exact, leninismul este teoria și tactica revoluției
         proletare în general, teoria și tactica dictaturii proletariatului în
-        special."
+        special.”
       </div>
       <Link
         href="https://www.marxists.org/romana/stalin/1929/Stalin-Problema-nationala-si-leninismul.pdf"
         target="_blank"
-        className="text-lg italic text-right "
+        className="text-lg italic"
       >
         --Iosef Stalin, Bazele Leninismului
       </Link>
@@ -116,11 +116,12 @@ export default function page() {
         ale lui Mao Zedong în toate cele trei ramuri ale marxismului, adică
         urmăm marxism-leninism-gândirea Mao Zedong. Și urmăm sinteza acestora
         drept al treilea stadiu al marxismului, după cum a fost descris de RIM
-        în 1995 în numărul 20 al publicației A World to Win.
+        în 1995 în numărul 20 al publicației "A World to Win", adică suntem
+        marxiști-leniniști-maoiști.
       </p>
       <br />
       <div className="text-xl italic">
-        "În cursul revoluției chineze, Mao a dezvoltat marxismul-leninismul în
+        „În cursul revoluției chineze, Mao a dezvoltat marxismul-leninismul în
         multe domenii importante. Dar în creuzetul Marii Revoluții Culturale
         Proletare a făcut un salt ideologia noastră și a treia mare piatră de
         hotar, marxismul-leninismul-maoismul, a apărut pe deplin. Din planul
@@ -129,12 +130,12 @@ export default function page() {
         lideri anteriori și într-adevăr chiar contribuțiile anterioare ale lui
         Mao Tsetung au căpătat o semnificație mai profundă. Astăzi, fără maoism
         nu poate exista marxism-leninism. Într-adevăr, a nega maoismul înseamnă
-        a nega însuși marxismul-leninismul."
+        a nega însuși marxismul-leninismul.”
       </div>
       <Link
         href="https://www.bannedthought.net/International/RIM/AWTW/1995-20/ll_mlm_20_eng.htm"
         target="_blank"
-        className="text-lg italic text-right "
+        className="text-lg italic"
       >
         --RIM, Trăiască Marxism-Leninism-Maoism-ul (1993)
       </Link>
@@ -151,19 +152,19 @@ export default function page() {
       </p>
       <br />
       <div className="text-xl italic">
-        "Comuniștii sunt, așadar, din punct de vedere practic, partea cea mai
+        „Comuniștii sunt, așadar, din punct de vedere practic, partea cea mai
         hotărâtă a partidelor muncitorești din toate țările, partea care împinge
         mereu înainte; din punct de vedere teoretic, față de restul masei
         proletariatului ei au superioritatea de a înțelege limpede condițiile,
         mersul și rezultatele generale ale mișcării proletare. Scopul imediat al
         comuniștilor este același ca și al tuturor celorlalte partide proletare:
         constituirea proletariatului ca clasă, răsturnarea dominației
-        burgheziei, cucerirea puterii politice de către proletariat."
+        burgheziei, cucerirea puterii politice de către proletariat.”
       </div>
       <Link
         href="https://www.marxists.org/romana/m-e/1848/manifest/c02.htm"
         target="_blank"
-        className="text-lg italic text-right "
+        className="text-lg italic"
       >
         --Karl Marx și Friedrich Engels, Manifestul Partidului Comunist
       </Link>
