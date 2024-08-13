@@ -116,7 +116,7 @@ export default function page() {
         ale lui Mao Zedong în toate cele trei ramuri ale marxismului, adică
         urmăm marxism-leninism-gândirea Mao Zedong. Și urmăm sinteza acestora
         drept al treilea stadiu al marxismului, după cum a fost descris de RIM
-        în 1995 în numărul 20 al publicației "A World to Win", adică suntem
+        în 1995 în numărul 20 al publicației „A World to Win”, adică suntem
         marxiști-leniniști-maoiști.
       </p>
       <br />
