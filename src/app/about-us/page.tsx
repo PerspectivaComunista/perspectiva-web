@@ -27,11 +27,11 @@ export default function page() {
         socialismului."
       </div>
       <Link
-        href="https://www.marxists.org/archive/lenin/works/1901/may/04.htm"
+        href="https://www.marxists.org/romana/lenin/1901/mai/04.htm"
         target="_blank"
         className="text-lg italic text-right "
       >
-        --Vladimir Lenin, De unde să începem
+        --Vladimir Lenin, Cu ce să începem?
       </Link>
       <h2 className="text-4xl font-black mt-8 mb-4 border-b-4 border-[#d6001d] w-fit">
         Suntem Comuniști:
