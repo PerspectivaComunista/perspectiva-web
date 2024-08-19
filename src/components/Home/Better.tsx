@@ -24,13 +24,14 @@ export default function Better({
           </Link>
         </div>
         <div className="group relative">
-          <h3 className="mt-1 mb-3 text-4xl font-extrabold leading-6 text-black group-hover:text-gray-600">
+          <h3 className="mt-1 mb-3 text-4xl font-extrabold leading-10 text-black group-hover:text-gray-600">
             <span className="absolute inset-0" />
             {lastPost.title}
           </h3>
-          <p className=" line-clamp-[12] sm:text-xl text-base mb-1 leading-5 text-gray-600">
-            {lastPost.text}...
-          </p>
+          <p
+            className=" line-clamp-[12] sm:text-xl text-base mb-1 leading-5 text-gray-600"
+            dangerouslySetInnerHTML={{ __html: lastPost.text + "..." }}
+          ></p>
         </div>
 
         <p className="text-gray-600 text-lg font-bold">
