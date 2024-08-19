@@ -89,6 +89,22 @@ body,
   background-position: 0 100%;
 }
 
+.article h2 {
+  @apply text-3xl font-black;
+}
+
+.article h3 {
+  @apply text-2xl font-bold;
+}
+
+.article a {
+  @apply text-red hover:underline;
+}
+
+.article sup {
+  @apply text-red;
+}
+
 @keyframes nav {
   0% {
     transform: translate(-100%, -160%) scale(0.01);

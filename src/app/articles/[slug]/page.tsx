@@ -63,7 +63,7 @@ export default async function page({ params }: { params: { slug: string } }) {
             <div className="flex justify-between items-center mt-2 ">
               <h2 className="sm:text-6xl text-4xl font-black inline">
                 {article.title}
-                <span className="sm:block hidden">
+                <span className="sm:inline hidden">
                   <CopyLink />
                 </span>
               </h2>
@@ -91,8 +91,8 @@ export default async function page({ params }: { params: { slug: string } }) {
         </div>
 
         <div className="flex lg:flex-row flex-col lg:gap-16">
-          <p
-            className="text-lg lg:mb-20 mb-10"
+          <div
+            className="article text-lg lg:mb-20 mb-10"
             dangerouslySetInnerHTML={{ __html: article.text }}
           />
         </div>
