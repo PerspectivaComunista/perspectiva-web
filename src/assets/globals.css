@@ -105,6 +105,18 @@ body,
   @apply text-red;
 }
 
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+blockquote + p {
+  text-align: right;
+}
+
 @keyframes nav {
   0% {
     transform: translate(-100%, -160%) scale(0.01);

@@ -24,10 +24,12 @@ export default function Better({
           </Link>
         </div>
         <div className="group relative">
-          <h3 className="mt-1 mb-3 text-4xl font-extrabold leading-10 text-black group-hover:text-gray-600">
-            <span className="absolute inset-0" />
-            {lastPost.title}
-          </h3>
+          <Link href={"/articles/" + lastPost.slug}>
+            <h2 className="mt-1 mb-3 text-4xl font-extrabold leading-10 text-black group-hover:text-gray-600">
+              <span className="absolute inset-0" />
+              {lastPost.title}
+            </h2>
+          </Link>
           <p
             className=" line-clamp-[12] sm:text-xl text-base mb-1 leading-5 text-gray-600"
             dangerouslySetInnerHTML={{ __html: lastPost.text + "..." }}
@@ -38,7 +40,7 @@ export default function Better({
           de {authors.find((e) => e.id === lastPost.author)?.shortName}
         </p>
       </div>
-      <Link href="/" className="sm:w-2/3">
+      <Link href={"/articles/" + lastPost.slug} className="sm:w-2/3">
         <Image
           src={lastPost.coverUrl}
           alt="Posts"
