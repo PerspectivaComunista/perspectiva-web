@@ -6,7 +6,7 @@ export default function page() {
   return (
     <main className="max-w-screen-xl mx-auto p-3 mb-10">
       <h2 className="text-4xl font-black mt-8 mb-4 border-b-4 border-[#d6001d] w-fit">
-        Suntem Perspectiva Comunistă;
+        Suntem Perspectiva Comunistă:
       </h2>
       <p className="text-xl">
         Perspectiva Comunistă este numele adoptat de către organizația noastră,
