@@ -72,7 +72,7 @@ export default async function page({
                   </h2>
                 </Link>
                 <h4
-                  className="my-4 text-base line-clamp-[9]"
+                  className="my-4 text-base line-clamp-[8]"
                   dangerouslySetInnerHTML={{
                     __html: article.text.slice(0, 1100) + "...",
                   }}
@@ -89,7 +89,7 @@ export default async function page({
                   width={500}
                   height={500}
                   priority={true}
-                  className="shadow-2xl object-cover max-h-72"
+                  className="shadow-2xl object-cover w-full h-full"
                 />
               </Link>
             </div>

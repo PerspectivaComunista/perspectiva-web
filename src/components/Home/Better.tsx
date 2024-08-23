@@ -31,7 +31,7 @@ export default function Better({
             </h2>
           </Link>
           <p
-            className=" line-clamp-[12] sm:text-xl text-base mb-1 leading-5 text-gray-600"
+            className=" line-clamp-[8] sm:text-xl text-base mb-1 leading-5 text-gray-600"
             dangerouslySetInnerHTML={{ __html: lastPost.text + "..." }}
           ></p>
         </div>
@@ -40,11 +40,11 @@ export default function Better({
           de {authors.find((e) => e.id === lastPost.author)?.shortName}
         </p>
       </div>
-      <Link href={"/articles/" + lastPost.slug} className="sm:w-2/3">
+      <Link href={"/articles/" + lastPost.slug} className="sm:w-2/3 h-[400px]">
         <Image
           src={lastPost.coverUrl}
           alt="Posts"
-          className="w-full shadow-2xl object-cover"
+          className="w-full h-full shadow-2xl object-cover"
           width={1000}
           height={1000}
           priority
