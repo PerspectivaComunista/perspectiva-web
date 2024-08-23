@@ -64,12 +64,12 @@ export default function Articles({
                     >
                       {article.createdAt}
                     </time>
-                    <Link
+                    {/* <Link
                       href={"/category/" + article.category}
                       className=" relative z-10 rounded-full bg-red-200 px-3 py-1.5 font-medium text-gray-700 hover:bg-red-300"
                     >
                       {article.category}
-                    </Link>
+                    </Link> */}
                   </div>
                   <Link
                     href={"/articles/" + article.slug}

@@ -16,12 +16,12 @@ export default function Better({
           <time dateTime={lastPost.createdAt} className="text-gray-500">
             {lastPost.createdAt}
           </time>
-          <Link
+          {/* <Link
             href={"/category/" + lastPost.category}
             className=" relative z-10 rounded-full bg-red-200 px-3 py-1.5 font-medium text-gray-700 hover:bg-red-300"
           >
             {lastPost.category}
-          </Link>
+          </Link> */}
         </div>
         <div className="group relative">
           <Link href={"/articles/" + lastPost.slug}>

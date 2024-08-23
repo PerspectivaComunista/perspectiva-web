@@ -55,12 +55,12 @@ export default function Library({ posts }: { posts: any[] }) {
                       <time dateTime={post.datetime} className="text-gray-500">
                         {post.date}
                       </time>
-                      <Link
+                      {/* <Link
                         href={post.category.href}
                         className=" relative z-10 rounded-full bg-red-200 px-3 py-1.5 font-medium text-gray-700 hover:bg-red-300"
                       >
                         {post.category.title}
-                      </Link>
+                      </Link> */}
                     </div>
                     <div className="group relative">
                       <h3 className="mt-1 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">

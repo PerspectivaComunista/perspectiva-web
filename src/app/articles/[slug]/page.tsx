@@ -76,12 +76,12 @@ export default async function page({ params }: { params: { slug: string } }) {
                 >
                   {article.createdAt}
                 </time>
-                <Link
+                {/* <Link
                   href={"/category/" + article.category}
                   className=" relative z-10 rounded-full bg-red-200 sm:px-3 px-4 py-1.5 font-medium text-gray-700 hover:bg-red-300"
                 >
                   {article.category}
-                </Link>
+                </Link> */}
                 <span className="sm:hidden block">
                   <CopyLink />
                 </span>
