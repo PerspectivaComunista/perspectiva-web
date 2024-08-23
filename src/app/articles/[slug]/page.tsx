@@ -3,7 +3,7 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 import CopyLink from "@/components/Shared/CopyLink";
 import { firebaseServerApp } from "@/utils/firebase/server";
-import { Article } from "@/utils/types";
+import { Article, Author } from "@/utils/types";
 import { HeartIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 
@@ -17,6 +17,13 @@ const getArticles = async (slug: string): Promise<Article> => {
 
   return article;
 };
+const getAuthor = async (): Promise<Author[]> => {
+  const db = getFirestore(firebaseServerApp);
+  const response = await db.collection("authors").get();
+  const authors = response.docs.map((doc: any) => doc.data()) as Author[];
+
+  return authors;
+};
 
 export async function generateMetadata({
   params,
@@ -24,6 +31,7 @@ export async function generateMetadata({
   params: { slug: string };
 }) {
   const article = await getArticles(params.slug);
+  const authors = await getAuthor();
 
   if (!article) {
     return redirect("/not-found");
@@ -41,6 +49,7 @@ export async function generateMetadata({
 
 export default async function page({ params }: { params: { slug: string } }) {
   const article = await getArticles(params.slug);
+  const authors = await getAuthor();
 
   if (!article) {
     return redirect("/not-found");
@@ -70,6 +79,9 @@ export default async function page({ params }: { params: { slug: string } }) {
             </div>
             <div className="mb-5">
               <div className="mt-2 flex items-center gap-x-4 sm:text-xs text-lg">
+                <p className="text-gray-600 text-lg font-bold">
+                  de {authors.find((e) => e.id === article.author)?.shortName}
+                </p>
                 <time
                   dateTime={article.createdAt}
                   className="text-gray-600 sm:text-base text-lg"
