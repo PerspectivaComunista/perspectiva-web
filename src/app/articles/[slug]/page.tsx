@@ -1,3 +1,4 @@
+"use server";
 const { getFirestore } = require("firebase-admin/firestore");
 import Image from "next/image";
 import { redirect } from "next/navigation";

@@ -1,3 +1,4 @@
+"use client";
 import { Article, Author } from "@/utils/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,7 +33,7 @@ export default function Better({
           </Link>
           <p
             className=" line-clamp-[8] sm:text-xl text-base mb-1 leading-5 text-gray-600"
-            dangerouslySetInnerHTML={{ __html: lastPost.text + "..." }}
+            dangerouslySetInnerHTML={{ __html: lastPost.text.slice(0, 885) }}
           ></p>
         </div>
 

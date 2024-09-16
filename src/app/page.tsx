@@ -7,6 +7,7 @@ import { firebaseServerApp } from "@/utils/firebase/server";
 import Instagram from "@/components/Home/Instagram";
 import Tiktok from "@/components/Home/Tiktok";
 import Youtube from "@/components/Home/Youtube";
+import { Suspense } from "react";
 
 const getArticles = async (): Promise<Article[]> => {
   const db = getFirestore(firebaseServerApp);
@@ -60,15 +61,25 @@ export default async function Home() {
   const youtubes = await getYoutube();
   return (
     <main className="flex flex-col max-w-screen-xl mx-auto items-center p-3">
-      <Better lastPost={articles[0]} authors={authors} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Better lastPost={articles[0]} authors={authors} />
+      </Suspense>
       <div className="my-6" />
-      <Articles articles={articles} authors={authors} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Articles articles={articles} authors={authors} />
+      </Suspense>
       <div className="my-6" />
-      <Youtube posts={youtubes} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Youtube posts={youtubes} />
+      </Suspense>
       <div className="my-6" />
-      <Tiktok posts={tiktoks} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Tiktok posts={tiktoks} />
+      </Suspense>
       <div className="my-6" />
-      <Instagram posts={instagrams} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Instagram posts={instagrams} />
+      </Suspense>
       {/* <Library posts={posts} /> */}
       <div className="my-6" />
     </main>
